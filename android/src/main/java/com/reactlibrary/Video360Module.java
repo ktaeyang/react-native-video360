@@ -116,7 +116,19 @@ public class Video360Module extends SimpleViewManager {
         VideoLoaderTask videoLoaderTask = new VideoLoaderTask();
         videoLoaderTask.execute(Pair.create(uri, videoOptions));
     }
-
+    
+    @ReactProp(name = "isPlay")
+    public void isPlay( VrVideoView view, boolean isPlay){
+            if(isPlay == true){
+                view.resumeRendering();
+                view.playVideo();
+            }
+            else {
+                view.pauseVideo();
+                view.pauseRendering();
+            }
+    }
+    
     private class ActivityEventListener extends VrVideoEventListener {
         @Override
         public void onLoadSuccess() {
