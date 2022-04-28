@@ -38,6 +38,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react-native-video360plugin-ktaeyang": "^1.0.8"
+    "react-native-video360plugin-ktaeyang": "2.0.0"
   }
 }
