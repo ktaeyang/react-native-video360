@@ -124,8 +124,9 @@ public class Video360Module extends SimpleViewManager {
                 view.playVideo();
             }
             else {
-                view.pauseVideo();
                 view.pauseRendering();
+                view.shutdown();
+                //view.pauseVideo();
             }
     }
     
